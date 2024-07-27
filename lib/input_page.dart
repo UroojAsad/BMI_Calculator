@@ -1,6 +1,9 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
+
+const bottomContainerHeight = 80.0;
+const activeContainerColor =Color(0xFF111428);
+const bottomContainerColor= Color(0xFFEB1555);
 
 class InputPage extends StatefulWidget {
 
@@ -23,17 +26,23 @@ body: Column(
   children: [
     Expanded(child:Row(
      children: [
-       Expanded(child: reuseable_card(colour: Color(0xFF111428),)),
-       Expanded(child: reuseable_card(colour: Color(0xFF111428),)),
+       Expanded(child: reuseable_card(colour: activeContainerColor,)),
+       Expanded(child: reuseable_card(colour: activeContainerColor,)),
      ],
     ) ),
-    Expanded(child:reuseable_card(colour: Color(0xFF111428),) ),
+    Expanded(child:reuseable_card(colour: activeContainerColor,) ),
     Expanded(child: Row(
       children: [
-        Expanded(child: reuseable_card(colour: Color(0xFF111428),)),
-        Expanded(child:reuseable_card(colour: Color(0xFF111428),) ),
+        Expanded(child: reuseable_card(colour: activeContainerColor),),
+        Expanded(child:reuseable_card(colour: activeContainerColor,) ),
       ],
     )),
+    Container(
+      width: double.infinity,
+      height: bottomContainerHeight,
+      margin: EdgeInsets.only(top: 10.0),
+      color: bottomContainerColor ,
+    )
   ],
 )
 );
@@ -42,12 +51,14 @@ body: Column(
 
 class reuseable_card extends StatelessWidget {
  final Color colour;
+ final  Widget  cardchild;
 
- reuseable_card({  required this.colour});
+ reuseable_card({  required this.colour , required this.cardchild});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      child: cardchild,
       margin: EdgeInsets.all(15.0),
       decoration: BoxDecoration(
           color: colour,
