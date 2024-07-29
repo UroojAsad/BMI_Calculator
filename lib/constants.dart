@@ -19,3 +19,23 @@ const klargeButtonTextStyle= TextStyle(
   fontWeight: FontWeight.bold,
   color: Colors.white,
 );
+
+const kResultTextStyle= TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 50.0,
+);
+
+const kresultTitleStyle=TextStyle(
+  color: Color(0xFF22E67B),
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold
+);
+
+const kBMIresultTextStyle=TextStyle(
+  fontSize: 100,
+  fontWeight: FontWeight.bold,
+);
+
+const kbodyTextStyle=TextStyle(
+  fontSize: 22
+);
