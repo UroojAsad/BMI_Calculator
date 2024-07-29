@@ -1,9 +1,12 @@
+import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
 import 'reuseable_card.dart';
 import 'constants.dart';
+import  'results.dart';
+
 
 int age=19;
 int weight=80;
@@ -193,17 +196,46 @@ body: Column(
             )) ),
       ],
     )),
-    Container(
-      width: double.infinity,
-      height: kbottomContainerHeight,
-      margin: EdgeInsets.only(top: 10.0),
-      color: kbottomContainerColor ,
+    large_end_button(
+      ontap:(){
+        Navigator.push(context, MaterialPageRoute(builder:(context){
+          return results();
+        }));
+      },
+       TitleText: 'CALCULATE',
     )
   ],
 )
 );
 }
   }
+
+class large_end_button extends StatelessWidget {
+
+final VoidCallback ontap;
+final String TitleText;
+
+large_end_button({ required this.ontap, required this.TitleText});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap:ontap,
+      child: Container(
+        child: Center(
+          child: Text(TitleText,
+          style: klargeButtonTextStyle),
+        ),
+        width: double.infinity,
+        height: kbottomContainerHeight,
+        //padding: EdgeInsets.only(bottom: 20.0),
+        margin: EdgeInsets.only(top: 10.0),
+        color: kbottomContainerColor ,
+      ),
+    );
+  }
+}
 
 
 

@@ -13,3 +13,9 @@ const klableTextStyle=TextStyle(
 const knumberTextStyle=TextStyle(
   fontSize: 50,fontWeight: FontWeight.w900,
 );
+
+const klargeButtonTextStyle= TextStyle(
+  fontSize: 25,
+  fontWeight: FontWeight.bold,
+  color: Colors.white,
+);
