@@ -85,9 +85,33 @@ body: Column(
             crossAxisAlignment: CrossAxisAlignment.baseline,
             textBaseline: TextBaseline.alphabetic,
             children: [
+              TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Color(0xFF4C4F5E),
+                  ),
+                  onPressed: (){
+                    setState(() {
+                      height--;
+                    });
+                  },
+                  child: Icon(FontAwesomeIcons.minus)),
+              SizedBox(width: 20,),
             Text(height.toString(),
             style: knumberTextStyle),
-            Text('cm',style: klableTextStyle,)
+            Text('cm',style: klableTextStyle,),
+              SizedBox(width: 20,),
+              TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Color(0xFF4C4F5E),
+                  ),
+                  onPressed: (){
+                    setState(() {
+                      height++;
+                    });
+                  },
+                  child: Icon(Icons.add)),
           ],),
           SliderTheme(
             data: SliderTheme.of(context).copyWith(
@@ -98,16 +122,19 @@ body: Column(
               thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15.0),
               overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0)
             ),
-            child: Slider(value: height.toDouble(),
-                min:120,
-                max:220,
+            child: Stack(
+              children: [ Slider(value: height.toDouble(),
+                  min:120,
+                  max:220,
 
+                  onChanged: (double newValue){
+              setState(() {
+                height=newValue.round();
+              });
+                  }),
 
-                onChanged: (double newValue){
-            setState(() {
-              height=newValue.round();
-            });
-                }),
+      ]
+            ),
           )
         ],
       )
@@ -208,7 +235,7 @@ body: Column(
           return results(
               bmiresult: calc.calculatrBMI(),
               resultText: calc.getresult(),
-              interpretation: calc.getInterpretation());
+              interpretation: calc.getInterpretation(), textStyle: calc.getBmiStyle(),);
         }));
       },
 

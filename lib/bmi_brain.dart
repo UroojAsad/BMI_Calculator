@@ -1,6 +1,10 @@
 
 import 'dart:core';
 import 'dart:math';
+import 'dart:ui';
+
+import 'package:bmi_calculator/constants.dart';
+import 'package:flutter/src/painting/text_style.dart';
 
 class calculateBrain {
 
@@ -29,6 +33,15 @@ class calculateBrain {
     }
   }
 
+  TextStyle getBmiStyle() {
+    if (_bmi >= 25) {
+      return kresultOverWeightTitleStyle;
+    } else{
+      return kresultTitleStyle;
+  }
+  }
+
+
 
   String getInterpretation(){
     if(_bmi>=25){
@@ -38,7 +51,7 @@ class calculateBrain {
       return 'You have a normal body weight. Good job!.';
     }
     else {
-      return 'You have a lower than normal weight. Yoy can eat a bit more.';
+      return 'You have a lower than normal weight. You can eat a bit more.';
     }
   }
 

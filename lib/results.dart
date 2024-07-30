@@ -9,8 +9,9 @@ class results extends StatelessWidget {
   final String bmiresult;
   final String resultText;
   final String  interpretation;
+  final TextStyle textStyle;
 
-results({required this.bmiresult , required this.resultText , required this.interpretation});
+results({required this.bmiresult , required this.resultText , required this.interpretation, required this.textStyle});
 
 
 
@@ -43,7 +44,7 @@ results({required this.bmiresult , required this.resultText , required this.inte
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(resultText.toUpperCase(),
-                    style: kresultTitleStyle,),
+                    style:textStyle,),
 
                     Text(bmiresult,
                     style: kBMIresultTextStyle,),

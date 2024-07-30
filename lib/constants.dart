@@ -31,6 +31,11 @@ const kresultTitleStyle=TextStyle(
   fontWeight: FontWeight.bold
 );
 
+const kresultOverWeightTitleStyle=TextStyle(
+    color:Colors.red,
+    fontSize: 22.0,
+    fontWeight: FontWeight.bold
+);
 const kBMIresultTextStyle=TextStyle(
   fontSize: 100,
   fontWeight: FontWeight.bold,
