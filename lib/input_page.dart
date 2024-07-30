@@ -7,7 +7,7 @@ import 'reuseable_card.dart';
 import 'constants.dart';
 import  'results.dart';
 import 'button.dart';
-
+import 'bmi_brain.dart';
 
 int age=19;
 int weight=80;
@@ -199,10 +199,18 @@ body: Column(
     )),
     large_end_button(
       ontap:(){
+
+        calculateBrain calc=calculateBrain(height: height, weight: weight);
+
         Navigator.push(context, MaterialPageRoute(builder:(context){
-          return results();
+          return results(
+              bmiresult: calc.calculatrBMI(),
+              resultText: calc.getresult(),
+              interpretation: calc.getInterpretation());
         }));
       },
+
+
        TitleText: 'CALCULATE',
     )
   ],
