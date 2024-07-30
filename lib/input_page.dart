@@ -148,7 +148,9 @@ body: Column(
 
                         ),
                         onPressed: (){
-                          weight++;
+                          setState(() {
+                            weight++;
+                          });
                         },
                         child: Icon(Icons.add))
                   ],)
