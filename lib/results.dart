@@ -22,6 +22,9 @@ results({required this.bmiresult , required this.resultText , required this.inte
         centerTitle: true,
         title: Text(
           'BMI CALCULATOR',
+          style: TextStyle(
+            color: Colors.white
+          ),
         ),
       ),
       body: Column(

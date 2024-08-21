@@ -34,7 +34,8 @@ return Scaffold(
 appBar: AppBar(
   centerTitle: true,
 elevation: 2,
-title: Text('BMI Calculator'),
+title: Text('BMI Calculator',
+style: TextStyle(color: Colors.white),),
 ),
 body: Column(
   crossAxisAlignment: CrossAxisAlignment.stretch,
