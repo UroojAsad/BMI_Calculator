@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const kbottomContainerHeight = 80.0;
 const kactiveContainerColor =Color(0xFF649EFF);
 const kinactiveContainerColor =Color(0xFF78AAFF);
-const kbottomContainerColor= Color(0xFFEB1555);
+const kbottomContainerColor= Color(0xFF00007C);
 
 const klableTextStyle=TextStyle(
   fontSize: 18,
@@ -27,13 +27,13 @@ const kResultTextStyle= TextStyle(
 
 const kresultTitleStyle=TextStyle(
   color: Color(0xFF22E67B),
-  fontSize: 22.0,
+  fontSize: 35.0,
   fontWeight: FontWeight.bold
 );
 
 const kresultOverWeightTitleStyle=TextStyle(
     color:Colors.red,
-    fontSize: 22.0,
+    fontSize: 35,
     fontWeight: FontWeight.bold
 );
 const kBMIresultTextStyle=TextStyle(
