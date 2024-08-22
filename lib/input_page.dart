@@ -118,8 +118,8 @@ body: Column(
             data: SliderTheme.of(context).copyWith(
     inactiveTrackColor:  Color(0xFF8D8E98),
              activeTrackColor: Colors.white,
-              thumbColor: Color(0xFFEB1555),
-              overlayColor: Color(0x28EB1555),
+              thumbColor: Color(0xFF00007C),
+              overlayColor: Color(0x2800007C),
               thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15.0),
               overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0)
             ),

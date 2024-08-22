@@ -13,6 +13,7 @@ class BMI_CALCULATOR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   MaterialApp(
+      debugShowCheckedModeBanner: false,
      theme: ThemeData.light().copyWith(
          appBarTheme: AppBarTheme(
            backgroundColor: Color(0xFF00007C), // Set AppBar color to green
